@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
     this.breakPointObserver
       .observe([Breakpoints.XSmall, Breakpoints.Small])
       .subscribe((state: BreakpointState) => {
-        console.log(state);
         if (state.matches) {
           this.isMobile = true;
         } else {

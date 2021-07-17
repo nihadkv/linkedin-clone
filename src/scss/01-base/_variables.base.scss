@@ -1,0 +1,23 @@
+$gradient: linear-gradient(180deg, #ffe028 0%, #ffdb2f 100%);
+$primary: #ffe028;
+$primary-60: rgba(255, 224, 40, 0.6);
+$primary-30: rgba(255, 224, 40, 0.3);
+$black-45: rgba(0, 0, 0, 0.45);
+$black-60: rgba(0, 0, 0, 0.6);
+$black-85: rgba(0, 0, 0, 0.85);
+$black-87: rgba(0, 0, 0, 0.87);
+$pure-black: #000000;
+$pure-white: #ffffff;
+
+:root {
+  --gradient: #{$gradient};
+  --primary: #{$primary};
+  --primary-60: #{$primary-60};
+  --primary-30: #{$primary-30};
+  --black-45: #{$black-45};
+  --black-60: #{$black-60};
+  --black-85: #{$black-85};
+  --black-87: #{$black-87};
+  --pure-black: #{$pure-black};
+  --pure-white: #{$pure-white};
+}
