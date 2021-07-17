@@ -1,0 +1,46 @@
+<ion-header>
+  <mat-toolbar>
+    <button mat-icon-button [ngClass]="{ 'linkedin-icon': isMobile }">
+      <ion-icon
+        color="primary"
+        class="logo-icon"
+        name="logo-linkedin"
+      ></ion-icon>
+    </button>
+    <ion-searchbar [hidden]="isMobile" color="light"></ion-searchbar>
+    <span class="example-spacer"></span>
+
+    <div fxLayout="row" fxLayoutGap="26px">
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <mat-icon>home</mat-icon>
+        <span class="paragraph-xs">Home</span>
+      </div>
+
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <mat-icon>people</mat-icon>
+        <span class="paragraph-xs">My Networks</span>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <mat-icon>card_travel</mat-icon>
+        <span class="paragraph-xs">Jobs</span>
+      </div>
+
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <mat-icon> message</mat-icon>
+        <span class="paragraph-xs">Messaging</span>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <mat-icon matBadge="15" matBadgeColor="warn">notifications</mat-icon>
+        <span class="paragraph-xs">Notifications</span>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <ion-avatar>
+          <img src="assets/Nihad.jpg" />
+        </ion-avatar>
+        <span class="paragraph-xs">Me</span>
+      </div>
+    </div>
+  </mat-toolbar>
+</ion-header>
+
+<!-- <ion-content> </ion-content> -->
