@@ -1,0 +1,12 @@
+.popover {
+  &__button {
+    border: 1px solid blue;
+    border-radius: 26px;
+    color: blue;
+  }
+
+  &__settings:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
