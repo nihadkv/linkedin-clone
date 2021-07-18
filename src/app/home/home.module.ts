@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { MaterialModule } from '../modules/material/material.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { PopoverComponent } from './components/header/popover/popover.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MaterialModule,
     FlexLayoutModule,
   ],
-  declarations: [HomePage, HeaderComponent],
+  declarations: [HomePage, HeaderComponent, PopoverComponent],
 })
 export class HomePageModule {}

@@ -11,36 +11,42 @@
     <span class="example-spacer"></span>
 
     <div fxLayout="row" fxLayoutGap="26px">
-      <div fxLayout="column" fxLayoutAlign="center center">
+      <div fxLayout="column" fxLayoutAlign="center center" class="button-icon">
         <mat-icon>home</mat-icon>
         <span class="paragraph-xs">Home</span>
       </div>
 
-      <div fxLayout="column" fxLayoutAlign="center center">
+      <div fxLayout="column" fxLayoutAlign="center center" class="button-icon">
         <mat-icon>people</mat-icon>
         <span class="paragraph-xs">My Networks</span>
       </div>
-      <div fxLayout="column" fxLayoutAlign="center center">
+      <div fxLayout="column" fxLayoutAlign="center center" class="button-icon">
         <mat-icon>card_travel</mat-icon>
         <span class="paragraph-xs">Jobs</span>
       </div>
 
-      <div fxLayout="column" fxLayoutAlign="center center">
+      <div fxLayout="column" fxLayoutAlign="center center" class="button-icon">
         <mat-icon> message</mat-icon>
         <span class="paragraph-xs">Messaging</span>
       </div>
-      <div fxLayout="column" fxLayoutAlign="center center">
+      <div fxLayout="column" fxLayoutAlign="center center" class="button-icon">
         <mat-icon matBadge="15" matBadgeColor="warn">notifications</mat-icon>
         <span class="paragraph-xs">Notifications</span>
       </div>
-      <div fxLayout="column" fxLayoutAlign="center center">
+      <div
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        class="button-icon"
+        (click)="presentPopover($event)"
+      >
         <ion-avatar>
           <img src="assets/Nihad.jpg" />
         </ion-avatar>
-        <span class="paragraph-xs">Me</span>
+        <div fxLayout="row" fxLayoutgap="4px">
+          <span class="paragraph-xs">Me</span>
+          <mat-icon>arrow_drop_down</mat-icon>
+        </div>
       </div>
     </div>
   </mat-toolbar>
 </ion-header>
-
-<!-- <ion-content> </ion-content> -->

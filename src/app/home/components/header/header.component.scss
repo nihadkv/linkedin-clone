@@ -19,6 +19,14 @@ ion-searchbar {
 }
 
 ion-avatar {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
+}
+
+.button-icon {
+  cursor: pointer;
+}
+
+.button-icon > div {
+  margin-bottom: 8px;
 }
