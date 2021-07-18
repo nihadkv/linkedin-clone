@@ -9,6 +9,9 @@ import { MaterialModule } from '../modules/material/material.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { PopoverComponent } from './components/header/popover/popover.component';
+import { ProfileSummaryComponent } from './components/profile-summary/profile-summary.component';
+import { StartPostComponent } from './components/start-post/start-post.component';
+import { AdvertisingComponent } from './components/advertising/advertising.component';
 
 @NgModule({
   imports: [
@@ -19,6 +22,13 @@ import { PopoverComponent } from './components/header/popover/popover.component'
     MaterialModule,
     FlexLayoutModule,
   ],
-  declarations: [HomePage, HeaderComponent, PopoverComponent],
+  declarations: [
+    HomePage,
+    HeaderComponent,
+    PopoverComponent,
+    ProfileSummaryComponent,
+    StartPostComponent,
+    AdvertisingComponent,
+  ],
 })
 export class HomePageModule {}

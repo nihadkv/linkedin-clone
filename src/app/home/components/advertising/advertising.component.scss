@@ -1,0 +1,11 @@
+.card {
+  width: 320px;
+
+  & mat-icon {
+    color: var(--black-60);
+  }
+
+  & > ol {
+    margin-left: -24px;
+  }
+}
