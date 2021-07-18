@@ -1,0 +1,33 @@
+.card {
+  width: 225px;
+  //   height: 150px;
+  // margin-top: 20px;
+  padding: 0 !important;
+
+  &__header {
+    background: #8a8a8a;
+    height: 48px;
+  }
+
+  &__avatar {
+    position: absolute;
+    top: 12px;
+    left: 76px;
+  }
+
+  &__name {
+    margin: 36px 70px;
+  }
+
+  &__name > span {
+    width: 122px;
+  }
+
+  &__footer {
+    padding: 6px 16px;
+
+    &__label {
+      color: var(--color-1);
+    }
+  }
+}
