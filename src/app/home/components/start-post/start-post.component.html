@@ -1,3 +1,29 @@
-<p>
-  start-post works!
-</p>
+<mat-card class="card">
+  <div fxLayout="row" fxLayoutGap="12px">
+    <ion-avatar>
+      <img src="assets/Nihad.jpg" />
+    </ion-avatar>
+    <button mat-flat-button class="card__button" (click)="presentModal()">
+      <span class="black-45 paragraph-s"> Start a post </span>
+    </button>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="space-around" class="card__actions">
+    <div fxLayout="row">
+      <mat-icon class="card__actions__icon-1">photo</mat-icon>
+      <span class="paragraph-xs black-60">Photo</span>
+    </div>
+    <div fxLayout="row">
+      <mat-icon class="card__actions__icon-2">play_arrow</mat-icon>
+      <span class="paragraph-xs black-60">Video</span>
+    </div>
+    <div fxLayout="row">
+      <mat-icon class="card__actions__icon-3">calendar_today</mat-icon>
+      <span class="paragraph-xs black-60">Events</span>
+    </div>
+    <div fxLayout="row">
+      <mat-icon class="card__actions__icon-4"> message</mat-icon>
+      <span class="paragraph-xs black-60">Write article</span>
+    </div>
+  </div>
+</mat-card>
