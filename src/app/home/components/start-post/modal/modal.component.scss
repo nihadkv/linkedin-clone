@@ -29,7 +29,13 @@
   }
 }
 
-// mat-form-field:focus {
-//   outline: none;
-//   border: 0;
-// }
+ion-footer,
+ion-header {
+  color: black;
+}
+
+:host ::ng-deep {
+  .footer-md::before {
+    content: none !important;
+  }
+}

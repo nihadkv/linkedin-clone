@@ -1,10 +1,10 @@
-<ion-content>
+<ion-header>
   <div class="modal" fxLayoutAlign="space-between">
     <span class="heading pure-black">Create a post</span>
     <mat-icon (click)="modalDismiss()" class="modal__close">close</mat-icon>
   </div>
-  <mat-divider></mat-divider>
-
+</ion-header>
+<ion-content>
   <div fxLayout="row" fxLayoutGap="6px" class="modal__content">
     <ion-avatar>
       <img src="assets/Nihad.jpg" />
@@ -31,7 +31,7 @@
     ></textarea>
   </mat-form-field> -->
 
-  <form #form="ngForm">
+  <form #form="ngForm" (ngSubmit)="onPost()">
     <ion-textarea
       rows="5"
       placeholder="What do you want to talk about ?"
@@ -41,9 +41,29 @@
       required
     >
     </ion-textarea>
-  </form>
 
-  <div fxLayout="row" fxLayoutGap="12px" class="modal__footer">
+    <div fxLayout="row" fxLayoutGap="20px" class="modal__footer">
+      <mat-icon>add</mat-icon>
+      <mat-icon>add_photo_alternate</mat-icon>
+      <mat-icon>play_arrow</mat-icon>
+      <mat-icon>calendar_view_day</mat-icon>
+      <div fxLayout="row" fxLayoutGap="2px">
+        <mat-icon> chat</mat-icon>
+        <span class="pure-black paragraph-xs">Anyone</span>
+      </div>
+      <button
+        mat-flat-button
+        type="submit"
+        class="modal__footer__button"
+        [disabled]="!form.valid"
+      >
+        Post
+      </button>
+    </div>
+  </form>
+</ion-content>
+<!-- <ion-footer>
+  <div fxLayout="row" fxLayoutGap="20px" class="modal__footer">
     <mat-icon>add</mat-icon>
     <mat-icon>add_photo_alternate</mat-icon>
     <mat-icon>play_arrow</mat-icon>
@@ -54,14 +74,11 @@
     </div>
     <button
       mat-flat-button
+      type="submit"
       class="modal__footer__button"
       [disabled]="!form.valid"
-      (click)="onPost()"
     >
       Post
     </button>
   </div>
-</ion-content>
-<!-- <ion-footer>
-  <mat-icon>add</mat-icon>
 </ion-footer> -->
