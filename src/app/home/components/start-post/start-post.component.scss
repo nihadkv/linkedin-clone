@@ -1,0 +1,36 @@
+.card {
+  & > ion-avatar {
+    width: 48px;
+    height: 48px;
+  }
+  &__button {
+    border: 1px solid var(--black-60);
+    border-radius: 50px;
+    width: 370px;
+
+    & span {
+      margin-left: -240px;
+    }
+  }
+
+  &__actions {
+    margin-top: 26px;
+
+    &__icon-1 {
+      color: #5a52eb;
+    }
+    &__icon-2 {
+      color: green;
+    }
+    &__icon-3 {
+      color: yellow;
+    }
+    &__icon-4 {
+      color: red;
+    }
+
+    & > div {
+      cursor: pointer;
+    }
+  }
+}

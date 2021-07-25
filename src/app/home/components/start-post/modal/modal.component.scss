@@ -1,0 +1,41 @@
+.modal {
+  padding: 18px 26px;
+
+  &__permissions {
+    border: 1px solid var(--black-45);
+    border-radius: 50px;
+    padding: 3px 8px;
+  }
+
+  &__close {
+    cursor: pointer;
+  }
+
+  &__content {
+    padding: 18px 20px;
+  }
+
+  &__footer {
+    padding: 16px 24px;
+
+    &__button {
+      background: rgb(65, 186, 226);
+    }
+  }
+  &__form {
+    margin: 6px 18px;
+    width: 32rem;
+    height: 15rem;
+  }
+}
+
+ion-footer,
+ion-header {
+  color: black;
+}
+
+:host ::ng-deep {
+  .footer-md::before {
+    content: none !important;
+  }
+}
