@@ -1,7 +1,7 @@
 <ion-header>
   <div class="modal" fxLayoutAlign="space-between">
     <span class="heading pure-black">Create a post</span>
-    <mat-icon (click)="modalDismiss()" class="modal__close">close</mat-icon>
+    <mat-icon (click)="modalDismiss(null)" class="modal__close">close</mat-icon>
   </div>
 </ion-header>
 <ion-content>
@@ -19,25 +19,12 @@
     </div>
   </div>
 
-  <!-- <mat-form-field class="modal__form" floatLabel="never">
-    <mat-label class="black-45 paragraph-l"
-      >What do you want to talk about ?</mat-label
-    >
-    <textarea
-      cdkTextareaAutosize
-      cdkAutosizeMinRows="16"
-      cdkAutosizeMaxRows="16"
-      matInput
-    ></textarea>
-  </mat-form-field> -->
-
-  <form #form="ngForm" (ngSubmit)="onPost()">
+  <form [formGroup]="formGroup">
     <ion-textarea
       rows="5"
       placeholder="What do you want to talk about ?"
       type="text"
-      ngModel
-      name="body"
+      formControlName="body"
       required
     >
     </ion-textarea>
@@ -55,30 +42,10 @@
         mat-flat-button
         type="submit"
         class="modal__footer__button"
-        [disabled]="!form.valid"
+        (click)="onPost(formGroup.value.body)"
       >
         Post
       </button>
     </div>
   </form>
 </ion-content>
-<!-- <ion-footer>
-  <div fxLayout="row" fxLayoutGap="20px" class="modal__footer">
-    <mat-icon>add</mat-icon>
-    <mat-icon>add_photo_alternate</mat-icon>
-    <mat-icon>play_arrow</mat-icon>
-    <mat-icon>calendar_view_day</mat-icon>
-    <div fxLayout="row" fxLayoutGap="2px">
-      <mat-icon> chat</mat-icon>
-      <span class="pure-black paragraph-xs">Anyone</span>
-    </div>
-    <button
-      mat-flat-button
-      type="submit"
-      class="modal__footer__button"
-      [disabled]="!form.valid"
-    >
-      Post
-    </button>
-  </div>
-</ion-footer> -->
