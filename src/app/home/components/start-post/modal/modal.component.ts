@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 
 @Component({
@@ -8,31 +8,32 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent implements OnInit {
-  @ViewChild('form') form: NgForm;
-  constructor(private modalController: ModalController) {}
+  formGroup: FormGroup;
+  constructor(
+    private modalController: ModalController,
+    private fb: FormBuilder
+  ) {}
 
-  ngOnInit() {}
-
-  onPost() {
-    if (!this.form.valid) {
-      return;
-    }
-    // eslint-disable-next-line @typescript-eslint/dot-notation
-    const body = this.form.value['body'];
-    this.modalController.dismiss(
-      {
-        post: {
-          body,
-          createdAt: new Date(),
-        },
-      },
-      'post'
-    );
+  ngOnInit() {
+    this.formGroup = this.fb.group({
+      body: [''],
+    });
   }
 
-  modalDismiss() {
-    // using the injected ModalController this page
-    // can "dismiss" itself and optionally pass back data
-    this.modalController.dismiss(null, 'dismiss');
+  onPost(body) {
+    this.modalDismiss(body);
+  }
+  modalDismiss(body) {
+    this.modalController.dismiss(
+      {
+        // data
+        post: {
+          body,
+          createAt: new Date(),
+        },
+      },
+      // role
+      'post'
+    );
   }
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
@@ -24,6 +24,7 @@ import { AllPostsComponent } from './components/all-posts/all-posts.component';
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   declarations: [
     HomePage,
@@ -33,7 +34,7 @@ import { AllPostsComponent } from './components/all-posts/all-posts.component';
     StartPostComponent,
     AdvertisingComponent,
     ModalComponent,
-    AllPostsComponent
+    AllPostsComponent,
   ],
 })
 export class HomePageModule {}
