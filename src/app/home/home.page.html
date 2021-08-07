@@ -5,7 +5,10 @@
 <ion-content>
   <div fxLayoutAlign="space-between">
     <app-profile-summary></app-profile-summary>
-    <app-start-post></app-start-post>
+    <div fxLayout="column" fxLayoutGap="20px">
+      <app-start-post></app-start-post>
+      <app-all-posts></app-all-posts>
+    </div>
     <app-advertising></app-advertising>
   </div>
 </ion-content>

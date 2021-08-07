@@ -1,3 +1,45 @@
-<p>
-  all-posts works!
-</p>
+<div>
+  <mat-card *ngFor="let post of allLoadedPosts; let i = index" class="card">
+    <div fxLayout="row" fxLayoutGap="16px">
+      <ion-avatar>
+        <img src="assets/Nihad.jpg" />
+      </ion-avatar>
+      <div fxLayout="column">
+        <span class="sub-heading black-60">Nihad KV</span>
+        <span class="paragraph-s black-45"> Full stack developer</span>
+        <div fxLayout="row" fxLayoutGap="3px">
+          <span class="paragraph-s black-45">1d. Edited. </span>
+          <mat-icon>language</mat-icon>
+        </div>
+      </div>
+    </div>
+    <span class="paragraph-l black-45">{{ i+1 }} {{ post.body }}</span>
+    <div fxLayout="row" fxLayoutGap="16px">
+      <div fxLayout="row" fxLayoutGap="6px">
+        <mat-icon class="black-45">thumb_up_off_alt</mat-icon>
+        <span class="paragraph-s black-45">Like</span>
+      </div>
+      <div fxLayout="row" fxLayoutGap="6px">
+        <mat-icon class="black-45">comment</mat-icon>
+        <span class="paragraph-s black-45">Comment</span>
+      </div>
+      <div fxLayout="row" fxLayoutGap="6px">
+        <mat-icon class="black-45">share</mat-icon>
+        <span class="paragraph-s black-45">Share</span>
+      </div>
+      <div fxLayout="row" fxLayoutGap="6px">
+        <mat-icon class="black-45">send</mat-icon>
+        <span class="paragraph-s black-45">Send</span>
+      </div>
+    </div>
+  </mat-card>
+</div>
+<div>
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data..."
+    >
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</div>
