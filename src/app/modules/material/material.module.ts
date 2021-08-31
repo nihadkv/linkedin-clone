@@ -7,6 +7,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 @NgModule({
   declarations: [],
   imports: [CommonModule],
@@ -18,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
     MatDividerModule,
     MatCardModule,
     MatInputModule,
+    MatFormFieldModule,
   ],
 })
 export class MaterialModule {}
