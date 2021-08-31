@@ -1,0 +1,32 @@
+.linkedin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__logo {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-1);
+
+    &__icon {
+      font-size: 44px;
+      color: var(--color-1);
+    }
+  }
+}
+
+.form {
+  width: 100%;
+
+  &__button {
+    width: 100%;
+  }
+
+  &__signup {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.policy {
+  text-decoration: none;
+}

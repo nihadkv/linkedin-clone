@@ -1,0 +1,96 @@
+<ion-content>
+  <div fxLayout="row" class="linkedin">
+    <span class="linkedin__logo pure-black">Linked</span>
+    <ion-icon class="linkedin__logo__icon" name="logo-linkedin"></ion-icon>
+  </div>
+  <form action="" [formGroup]="formGroup" style="margin: 0 400px">
+    <div *ngIf="submissionType === 'join'">
+      <mat-form-field class="form" appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input
+          matInput
+          placeholder="First Name"
+          formControlName="firstName"
+          type="text"
+        />
+      </mat-form-field>
+      <span
+        *ngIf="!formGroup.get('firstName').valid && formGroup.get('firstName').touched"
+        style="color: red"
+        >Please enter your first name</span
+      >
+    </div>
+    <div *ngIf="submissionType === 'join'">
+      <mat-form-field class="form" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input
+          matInput
+          placeholder="Last Name"
+          formControlName="lastName"
+          type="text"
+        />
+      </mat-form-field>
+      <span
+        *ngIf="!formGroup.get('lastName').valid && formGroup.get('lastName').touched"
+        style="color: red"
+        >Please enter your last name</span
+      >
+    </div>
+    <div>
+      <mat-form-field class="form" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="Email"
+          formControlName="email"
+          type="email"
+        />
+      </mat-form-field>
+      <span
+        *ngIf="!formGroup.get('email').valid && formGroup.get('email').touched"
+        style="color: red"
+        >Please enter your email</span
+      >
+    </div>
+    <div>
+      <mat-form-field class="form" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          placeholder="Password"
+          formControlName="password"
+          type="password"
+        />
+      </mat-form-field>
+      <span
+        *ngIf="!formGroup.get('password').valid && formGroup.get('password').touched"
+        style="color: red"
+        >Please enter your password</span
+      >
+    </div>
+    <button
+      mat-flat-button
+      color="primary"
+      class="form__button paragraph-l"
+      [disabled]="formGroup.get('email').invalid || formGroup.get('password').invalid"
+      (click)="formSubmit()"
+    >
+      {{submissionType === 'login'? 'Sign in': 'Accept & Join'}}
+    </button>
+    <span class="paragraph-xs black-45"
+      >{{submissionType === 'login'? 'New to LinkedIn': 'Already on
+      Linkedin'}}</span
+    >
+    <a class="paragraph-xs form__signup" (click)="toggleText()"
+      >{{submissionType === 'login'? ' Join Now': ' Sign in'}}</a
+    >
+    {{formGroup.value | json}}
+  </form>
+  <div *ngIf="submissionType === 'join'">
+    <span class="paragraph-xs black-45"
+      >By clicking Agree & Join, you agree to theLinkedin
+    </span>
+    <a href="#" class="policy">User Agrement, Privacy Policy</a>,
+    <span>and </span><a class="policy" href="#">Cookie Policy</a>
+  </div>
+</ion-content>
